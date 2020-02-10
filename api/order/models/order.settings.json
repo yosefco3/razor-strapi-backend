@@ -1,0 +1,27 @@
+{
+  "info": {
+    "name": "order"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "items": {
+      "type": "json"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "orders"
+    }
+  },
+  "connection": "default",
+  "collectionName": "orders"
+}
